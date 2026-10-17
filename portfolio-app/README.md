@@ -1,16 +1,18 @@
-# React + Vite
+# Swastik Tripathi — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Single-page portfolio for a content strategist & video editor, built with React + Vite.
 
-Currently, two official plugins are available:
+## Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build in dist/
+npm run lint
+```
 
-## React Compiler
+## Editing content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+All text, numbers, links and lists live in [`src/data.js`](src/data.js) — update that file rather than `App.jsx`.
+Figures are sourced from the CV, the Creator Pipeline sheet and the Tohands Creative Requirement sheet
+(kept outside the repo because they contain creator contact details).
