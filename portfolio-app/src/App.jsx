@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  TrendingUp, Play, ArrowRight, ArrowUpRight, Briefcase, Users, Target,
+  TrendingUp, ArrowRight, ArrowUpRight, Briefcase, Users, Target,
   Lightbulb, Clock, Award, GraduationCap, Eye, Clapperboard,
 } from 'lucide-react';
 import './index.css';
 import {
-  profile, contact, heroStats, influencerCase, adCase, editingCase, growthCase, videos,
+  profile, contact, heroStats, influencerCase, adCase, editingCase, growthCase,
   process, experience, education, certifications, skillGroups,
 } from './data.js';
+import WorkShowcase from './WorkShowcase.jsx';
 
 const LinkedInIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -423,42 +424,12 @@ function App() {
           </article>
         </section>
 
-        {/* WORK SAMPLES - YouTube Thumbnails */}
+        {/* WORK SAMPLES */}
         <section id="samples" className="section-wrapper">
           <h2 className="section-title reveal">Work Samples</h2>
-          <p className="section-subtitle reveal">Content I scripted, directed & edited for <span className="hl">@Tohands</span></p>
+          <p className="section-subtitle reveal">One highlight from each lane — hit <span className="hl">View more</span> for the rest.</p>
 
-          <div className="yt-grid">
-            {videos.map((video, i) => (
-              <a
-                key={video.id}
-                href={`https://youtube.com/watch?v=${video.id}`}
-                target="_blank"
-                rel="noreferrer"
-                className={`yt-card reveal ${delayClass(i)}`}
-              >
-                <div className="yt-thumb-wrapper">
-                  <img
-                    src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                    alt={video.title}
-                    className="yt-thumb"
-                    loading="lazy"
-                    onError={(e) => { e.target.style.display='none'; }}
-                  />
-                  <div className="yt-overlay">
-                    <div className="yt-play-btn">
-                      <Play fill="#fff" color="#fff" size={24} />
-                    </div>
-                  </div>
-                  <span className="yt-tag">{video.tag}</span>
-                </div>
-                <div className="yt-info">
-                  <h4>{video.title}</h4>
-                  <p>Tohands • Scripted & Edited by Swastik</p>
-                </div>
-              </a>
-            ))}
-          </div>
+          <WorkShowcase />
         </section>
 
         {/* PROCESS SECTION */}

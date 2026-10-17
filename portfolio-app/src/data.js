@@ -99,15 +99,66 @@ export const editingCase = {
   ],
 };
 
-export const videos = [
-  { id: 'Epso8CsmMbk', title: 'Barcode Billing Tutorial', tag: 'Tutorial' },
-  { id: 'TFYw6IctjGM', title: 'Smart Dukaan Setup', tag: 'Product' },
-  { id: 'qsvA_IG5oUw', title: 'Inventory Management', tag: 'How-To' },
-  { id: 'yyCdw3BOSdM', title: 'Tohands V5 Unboxing', tag: 'Brand' },
-  { id: '9h1IET37Vyc', title: 'QR Code Payment', tag: 'Tutorial' },
-  { id: '00aqiegoGrQ', title: 'Printer Setup Guide', tag: 'Tutorial' },
-  { id: 'w8hcMvVOf80', title: 'ASMR Billing Session', tag: 'Creative' },
-  { id: 'WS_4Djuc22Y', title: 'Ledger & Accounts', tag: 'How-To' },
+// Work section: one featured video per category, the rest open in "View more".
+// platform: 'short' (YouTube Short), 'youtube' (regular video) or 'instagram' (reel).
+// Optional `thumb`: path to an image in public/thumbs/ — needed for Instagram and for private YouTube videos.
+const shorts = (ids) => ids.map((id) => ({ platform: 'short', id }));
+
+export const workCategories = [
+  {
+    id: 'performance',
+    name: 'Performance Marketing',
+    color: '#3b82f6',
+    badge: '15.5x ROAS',
+    label: 'Performance Creative',
+    tags: ['Strategy', 'Script', 'Shoot', 'Edit'],
+    videos: shorts([
+      '7zg-yGk4A_k', 'qBTrczhcot0', 'ek9OiFmjx4A', 'UVdAFRIBXMk', '2Z2Jm34X_pg',
+      'pNMg0uJov64', 'Fjdz40Es_3Q', 'DpeDe59REMM', 'Lx0tjc-KK8o',
+    ]),
+  },
+  {
+    id: 'editing',
+    name: 'Video Editing',
+    color: '#D4FF00',
+    badge: '100+ videos edited',
+    label: 'Edit',
+    tags: ['Hook', 'Pacing', 'Captions', 'Sound'],
+    videos: shorts([
+      'qCZZ8VTf3us', 'eOK1HpxrLDE', 'dCyOk9fdFyk', 'IMNtvBxJsso', 'IsxYAnI7PwA', '2GJS6eMElG8', 'jEV1_I54hFw',
+    ]),
+  },
+  {
+    id: 'influencer',
+    name: 'Influencer Marketing',
+    color: '#a855f7',
+    badge: '125M+ views',
+    label: 'Creator Collab',
+    tags: ['Source', 'Brief', 'Launch', 'Track'],
+    videos: [
+      { platform: 'instagram', id: 'DaSlXpupWW-', badge: '59M views', thumb: '/thumbs/ig-DaSlXpupWW-.jpg' },
+      { platform: 'instagram', id: 'DZnGRtZSPqM', badge: '21M+ views', thumb: '/thumbs/ig-DZnGRtZSPqM.jpg' },
+      { platform: 'instagram', id: 'DeHPlvgJ2oQ', thumb: '/thumbs/ig-DeHPlvgJ2oQ.jpg' },
+    ],
+  },
+  {
+    id: 'youtube',
+    name: 'YouTube & Social',
+    color: '#ec4899',
+    badge: '4K → 10.5K subs',
+    label: 'YouTube Tutorial',
+    tags: ['Research', 'Script', 'Record', 'Edit'],
+    videos: [
+      { platform: 'youtube', id: 'Epso8CsmMbk', title: 'Connect the 2-in-1 Label Printer' },
+      { platform: 'youtube', id: 'TFYw6IctjGM', title: 'Settle Your Due Amount' },
+      { platform: 'youtube', id: 'qsvA_IG5oUw', title: '2-Inch & 3-Inch Printer Setup' },
+      { platform: 'youtube', id: '9h1IET37Vyc', title: 'Dynamic Payment Display Setup' },
+      { platform: 'youtube', id: '00aqiegoGrQ', title: 'Link the Calculator with the App (Hindi)' },
+      { platform: 'youtube', id: 'w8hcMvVOf80', title: 'Connect a Keyboard' },
+      { platform: 'youtube', id: 'WS_4Djuc22Y', title: 'Add Your Shop Logo to Printed Bills' },
+      { platform: 'youtube', id: 'yyCdw3BOSdM', title: 'Getting Help from Support' },
+    ],
+  },
 ];
 
 export const process = [
