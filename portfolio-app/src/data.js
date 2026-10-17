@@ -1,11 +1,17 @@
 // All portfolio content lives here. Numbers are sourced from the CV,
 // the Creator Pipeline sheet and the Tohands Creative Requirement sheet.
 
+export const profile = {
+  name: 'Swastik Tripathi',
+  title: 'Content Strategist & Video Editor',
+};
+
 export const contact = {
   email: 'ratanswastik9151@gmail.com',
   linkedin: 'https://www.linkedin.com/in/swastik-ratan-tripathi-8621b436b/',
   linkedinHandle: 'swastik-ratan-tripathi',
-  brandInstagram: 'https://www.instagram.com/tohands.in/',
+  instagram: 'https://www.instagram.com/snick0_/',
+  instagramHandle: '@snick0_',
 };
 
 export const heroStats = [
@@ -67,6 +73,29 @@ export const growthCase = {
     'Festival and occasion-based campaigns planned ahead of the calendar.',
     'Product tutorials and Shorts made end-to-end: competitor research, scripting, recording, Premiere Pro edit.',
     'Influencer collabs used as a follower-growth lever, not just a sales channel.',
+  ],
+};
+
+export const editingCase = {
+  stats: [
+    { value: '100+', label: 'videos edited', note: 'across performance marketing, social media & creator content' },
+    { value: '3+', label: 'content formats', note: 'Performance Ads, Social Reels, Influencer Content' },
+    { value: '2–3/day', label: 'reels produced', note: 'for ongoing brand and content requirements' },
+    { value: 'End-to-End', compact: true, label: 'workflow', note: 'editing, captions, sound design, pacing, transitions & final delivery' },
+  ],
+  work: [
+    { project: 'Performance Ad — Tohands', type: 'Performance Marketing', role: 'Edit + Creative Execution', output: 'Meta Ad' },
+    { project: 'Social Media Reels', type: 'Organic Social', role: 'Edit + Content Execution', output: 'Instagram Reel' },
+    { project: 'Creator / Influencer Videos', type: 'Influencer Marketing', role: 'Scripting + Storytelling', output: 'Short-form' },
+    { project: 'Product / Brand Content', type: 'Brand Content', role: 'Edit + Post Production', output: 'Social Video' },
+    { project: 'UGC Performance Creative', type: 'Paid Social', role: 'Storytelling + Scripting + Execution', output: 'Ad Creative' },
+  ],
+  learnings: [
+    { lead: 'The first 2–3 seconds matter', text: 'Strong visual hooks and quick context help stop the scroll.' },
+    { lead: 'Pacing beats over-editing', text: 'Every cut, zoom, caption and transition should have a purpose.' },
+    { lead: 'Retention is the real metric', text: 'I edit for attention, not just aesthetics.' },
+    { lead: 'Platform changes the edit', text: 'Meta ads, Instagram Reels and creator content need different pacing, structure and storytelling.' },
+    { lead: 'Good editing starts before Premiere', text: 'Understanding the footage, audience, objective and message makes the final edit stronger.' },
   ],
 };
 
@@ -175,22 +204,61 @@ export const certifications = [
   { issuer: 'HubSpot Academy', name: 'Social Media Marketing' },
 ];
 
-export const skills = [
-  { label: 'Premiere Pro', emoji: '🎬', size: 'xl', color: '#D4FF00' },
-  { label: 'Influencer Marketing', emoji: '🤳', size: 'xl', color: '#a855f7' },
-  { label: 'Content Strategy', emoji: '🧠', size: 'lg', color: '#ec4899' },
-  { label: 'Meta Ads Manager', emoji: '📊', size: 'lg', color: '#3b82f6' },
-  { label: 'Scriptwriting', emoji: '✍️', size: 'lg', color: '#D4FF00' },
-  { label: 'On-Camera', emoji: '🎥', size: 'lg', color: '#f97316' },
-  { label: 'Creator Sourcing', emoji: '🔎', size: 'md', color: '#22d3ee' },
-  { label: 'Negotiation', emoji: '🤝', size: 'md', color: '#a855f7' },
-  { label: 'Hook & Hold Rate', emoji: '🎣', size: 'md', color: '#ec4899' },
-  { label: 'Voiceover', emoji: '🎙️', size: 'md', color: '#D4FF00' },
-  { label: 'Meta Creator Hub', emoji: '🧭', size: 'md', color: '#3b82f6' },
-  { label: 'YouTube Studio', emoji: '▶️', size: 'md', color: '#f97316' },
-  { label: 'Instagram Insights', emoji: '📈', size: 'md', color: '#22d3ee' },
-  { label: 'Canva', emoji: '🎨', size: 'sm', color: '#a855f7' },
-  { label: 'Team Leadership', emoji: '👥', size: 'sm', color: '#D4FF00' },
-  { label: 'Stakeholder Mgmt', emoji: '🗂️', size: 'sm', color: '#ec4899' },
-  { label: 'Weekly Auditing', emoji: '📋', size: 'sm', color: '#3b82f6' },
+export const skillGroups = [
+  {
+    name: 'Performance Marketing',
+    emoji: '📊',
+    color: '#3b82f6',
+    skills: [
+      { label: 'Meta Ads', emoji: '📣' },
+      { label: '15.5x ROAS', emoji: '🚀' },
+      { label: 'Hook Rate Optimization', emoji: '🎣' },
+      { label: 'Hold Rate', emoji: '⏱️' },
+      { label: 'A/B Testing', emoji: '🔬' },
+      { label: 'Performance Analysis', emoji: '📈' },
+      { label: 'Weekly Auditing', emoji: '📋' },
+    ],
+  },
+  {
+    name: 'Video Editing',
+    emoji: '🎬',
+    color: '#D4FF00',
+    skills: [
+      { label: 'Premiere Pro', emoji: '🎞️' },
+      { label: 'Scriptwriting', emoji: '✍️' },
+      { label: 'Storyboarding', emoji: '🖼️' },
+      { label: 'On-Camera', emoji: '🎥' },
+      { label: 'Voiceover', emoji: '🎙️' },
+      { label: 'Video Production', emoji: '📹' },
+      { label: 'Creative Editing', emoji: '✂️' },
+    ],
+  },
+  {
+    name: 'Social Media',
+    emoji: '📱',
+    color: '#ec4899',
+    skills: [
+      { label: 'Content Strategy', emoji: '🧠' },
+      { label: 'Instagram Growth', emoji: '📸' },
+      { label: 'YouTube', emoji: '▶️' },
+      { label: 'Brand Building', emoji: '🏆' },
+      { label: 'Content Planning', emoji: '🗓️' },
+      { label: 'Audience Growth', emoji: '👥' },
+      { label: 'Weekly Auditing', emoji: '🔁' },
+    ],
+  },
+  {
+    name: 'Influencer Marketing',
+    emoji: '🤳',
+    color: '#a855f7',
+    skills: [
+      { label: 'Influencer Marketing', emoji: '🌟' },
+      { label: 'Creator Outreach', emoji: '📩' },
+      { label: 'Creator Sourcing', emoji: '🔎' },
+      { label: 'Negotiation', emoji: '🤝' },
+      { label: 'Campaign Management', emoji: '🗂️' },
+      { label: 'Pipeline Management', emoji: '🧩' },
+      { label: 'Creator Performance Analysis', emoji: '📊' },
+    ],
+  },
 ];
